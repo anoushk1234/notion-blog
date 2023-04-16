@@ -5,16 +5,16 @@
 }
 
 html {
-  font-family: 'Inter', 'Helvetica Neue', -apple-system, BlinkMacSystemFont,
-    Helvetica, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
-    'Droid Sans', 'Microsoft Yahei', sans-serif;
+  font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 @supports (font-variation-settings: normal) {
   html {
-    font-family: 'Inter var', 'Helvetica Neue', -apple-system,
-      BlinkMacSystemFont, Helvetica, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-      Cantarell, 'Fira Sans', 'Droid Sans', 'Microsoft Yahei', sans-serif;
+    font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 }
 

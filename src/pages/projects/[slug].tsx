@@ -7,18 +7,19 @@ import Content from '../../components/content'
 import getPageData from '../../lib/notion/getPageData'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import getProjectIndex from '../../lib/notion/getProjectIndex'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug } }) {
   // load the postsTable so that we can get the page's ID
-  const postsTable = await getBlogIndex()
+  const postsTable = await getProjectIndex()
   const post = postsTable[slug]
 
   if (!post) {
     console.log(`Failed to find post for slug: ${slug}`)
     return {
       props: {
-        redirect: '/blog',
+        redirect: '/projects',
       },
     }
   }

@@ -9,6 +9,7 @@ import getPageData from '../lib/notion/getPageData'
 
 export async function getStaticProps() {
   const postData = await getPageData(BLOG_INDEX_ID, 2)
+
   const post = { content: postData.blocks }
 
   return {
@@ -21,8 +22,8 @@ export async function getStaticProps() {
 export default ({ post }) => {
   return (
     <article>
-      <h1>Shu Ding</h1>
-      <Header title="Shu Ding" />
+      <h1>About</h1>
+      <Header title="About" />
       <Content blocks={post.content || []} />
     </article>
   )

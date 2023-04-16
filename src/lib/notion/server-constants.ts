@@ -15,5 +15,7 @@ const normalizeId = id => {
 
 export const NOTION_TOKEN = process.env.NOTION_TOKEN
 export const BLOG_INDEX_ID = normalizeId(process.env.BLOG_INDEX_ID)
+export const PROJECT_INDEX_ID = normalizeId(process.env.PROJECT_INDEX_ID)
 export const API_ENDPOINT = 'https://www.notion.so/api/v3'
 export const BLOG_INDEX_CACHE = path.resolve('.blog_index_data')
+export const PROJECT_INDEX_CACHE = path.resolve('.project_index_data')
