@@ -52,13 +52,16 @@ export default ({ posts = [] }) => {
       <div className="post-list">
         {posts.map(post => {
           return (
-            <p className="post-item" key={post.Slug}>
-              <a target="_blank" href={post.Link} rel="noopener noreferrer">
-                <a>{post.Name}</a>
-              </a>
-              {/* <time>{getDateStr(post.Date)}</time> */}
-              <time>{post.Description}</time>
-            </p>
+            <>
+              <p className="post-item-projects" key={post.Slug}>
+                <a target="_blank" href={post.Link} rel="noopener noreferrer">
+                  <a>{post.Name}</a>
+                </a>
+                {/* <time>{getDateStr(post.Date)}</time> */}
+                <time>{post.Description}</time>
+              </p>
+              <hr />
+            </>
           )
         })}
       </div>

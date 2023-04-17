@@ -172,11 +172,44 @@ article pre {
   margin: 2rem 0 5rem;
 }
 
+.post-item-projects {
+  display: flex;
+  margin-top: 0rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  justify-content: space-between;
+  clear: both;
+}
+.post-item-projects a {
+  display: inline;
+  margin-right: 1rem;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.post-list hr {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  /* height: 0; */
+}
+
+.post-item-projects time {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 2em;
+}
+
 .post-item {
+  /* display: flex; */
   margin-top: 0rem;
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0;
+  /* justify-content: space-between; */
   clear: both;
 }
 
