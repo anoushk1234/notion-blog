@@ -5,8 +5,8 @@ import Header from '../../components/header'
 import Content from '../../components/content'
 
 import getPageData from '../../lib/notion/getPageData'
-import getBlogIndex from '../../lib/notion/getBlogIndex'
-import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+// import getBlogIndex from '../../lib/notion/getBlogIndex'
+import { getDateStr, getProjectLink } from '../../lib/blog-helpers'
 import getProjectIndex from '../../lib/notion/getProjectIndex'
 
 // Get the data for each blog post
@@ -39,11 +39,11 @@ export async function getStaticProps({ params: { slug } }) {
 
 // Return our list of blog posts to prerender
 export async function getStaticPaths() {
-  const postsTable = await getBlogIndex()
+  const postsTable = await getProjectIndex()
   return {
     paths: Object.keys(postsTable)
       .filter(post => postsTable[post].Published === 'Yes')
-      .map(slug => getBlogLink(slug)),
+      .map(slug => getProjectLink(slug)),
     fallback: true,
   }
 }

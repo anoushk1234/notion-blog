@@ -13,7 +13,7 @@ export default function Content({ blocks }) {
   let listTagName: string | null = null
   let listLastId: string | null = null
   let listChildren: React.ReactElement[] = []
-  console.log(blocks)
+  // console.log(blocks)
   return (
     <>
       <div className="content">
