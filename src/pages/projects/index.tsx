@@ -45,7 +45,6 @@ export async function getStaticProps() {
 }
 
 export default ({ posts = [] }) => {
-  console.log(posts[0])
   return (
     <article>
       <h1>Projects</h1>
