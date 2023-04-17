@@ -1,5 +1,6 @@
 # Notion Blog
 
-Forked from [ijjk/notion-blog](https://github.com/ijjk/notion-blog).
+Forked from [shuding/notion-blog](https://github.com/shuding/notion-blog)
+which is a fork of [ijjk/notion-blog](https://github.com/ijjk/notion-blog).
 
-Hosted on Vercel.
+Credit goes to both of them for the their work.

@@ -6,6 +6,7 @@ import Content from '../components/content'
 import { BLOG_INDEX_ID } from '../lib/notion/server-constants'
 
 import getPageData from '../lib/notion/getPageData'
+import Footer from '../components/footer'
 
 export async function getStaticProps() {
   const postData = await getPageData(BLOG_INDEX_ID, 2)

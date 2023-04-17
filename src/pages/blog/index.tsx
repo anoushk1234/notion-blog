@@ -5,6 +5,7 @@ import { getBlogLink, getDateStr, postIsReady } from '../../lib/blog-helpers'
 import { textBlock } from '../../lib/notion/renderers'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
+import BioLinks from '../../components/bio-links'
 
 export async function getStaticProps() {
   const postsTable = await getBlogIndex()
@@ -40,21 +41,40 @@ export async function getStaticProps() {
 
 export default ({ posts = [] }) => {
   return (
-    <article>
-      <h1>Thoughts</h1>
-      <Header title="Thoughts" />
-      <div className="post-list">
-        {posts.map(post => {
-          return (
-            <p className="post-item" key={post.Slug}>
-              <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                <a>{post.Page}</a>
-              </Link>
-              <time>{getDateStr(post.Date)}</time>
-            </p>
-          )
-        })}
-      </div>
-    </article>
+    <>
+      <article>
+        <h1
+          style={{
+            fontWeight: 800,
+            lineHeight: 1.1111111,
+            fontSize: '1.6em',
+          }}
+        >
+          Thoughts
+        </h1>
+        <Header title="Thoughts" />
+        <div className="post-list">
+          {posts.map(post => {
+            return (
+              <p className="post-item" key={post.Slug}>
+                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                  <a>{post.Page}</a>
+                </Link>
+                <time>{getDateStr(post.Date)}</time>
+              </p>
+            )
+          })}
+        </div>
+        <span
+          style={{
+            position: 'absolute',
+            bottom: '0',
+            width: '44rem',
+          }}
+        >
+          <BioLinks />
+        </span>
+      </article>
+    </>
   )
 }

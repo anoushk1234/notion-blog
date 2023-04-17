@@ -5,14 +5,14 @@
 }
 
 html {
-  font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 @supports (font-variation-settings: normal) {
   html {
-    font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont,
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
       Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
       Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
@@ -20,7 +20,7 @@ html {
 
 body {
   margin: 0;
-  color: #111;
+  color: #f3f4f6;
   font-size: 14px;
   line-height: 1.65;
   word-break: break-word;
@@ -28,17 +28,22 @@ body {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
+  -moz-osx-font-smoothing: grayscale;
   hyphens: auto;
-  font-feature-settings: 'calt', 'case', 'rlig';
+  font-feature-settings: 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02', 'cv03' 1,
+    'cv04' 1, 'liga', 'clig', 'calt';
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-color: white;
+  background-color: #18181a;
   font-weight: 400;
+  letter-spacing: 0.005em;
+  font-variant: common-ligatures contextual;
+  font-variation-settings: 'wght' 450;
 }
 
 *::selection {
-  color: white;
-  background: #103cff;
+  /* color: white; */
+  background: #95a5ac40;
 }
 
 a:focus,
@@ -48,9 +53,14 @@ article a:focus {
 }
 
 article {
+  /* font-weight: 450; */
+
   margin: auto;
+  /* border: 1px solid white; */
   padding: 4rem 1rem 0;
-  max-width: 42rem;
+  max-width: 44rem;
+  line-height: 1.6;
+  word-spacing: -0.04em;
   width: 100vw;
   white-space: pre-line;
 }
@@ -64,26 +74,34 @@ article .content > a {
 }
 
 article h1 {
-  font-size: 1.5em;
-  font-weight: 600;
-  letter-spacing: -0.02rem;
+  font-size: 1.6em;
+  margin-bottom: 0.4em;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  font-variation-settings: 'wght' 650;
 }
 
 article h2 {
-  margin-top: 2.5rem;
+  margin-top: 0rem;
   font-size: 1.3em;
   font-weight: 600;
 }
 
 article h3 {
   font-size: 1.12em;
-  margin-top: 2.5rem;
+  margin-top: 0rem;
   font-weight: 500;
 }
 
 article p {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.6em;
+  word-spacing: 0.04em;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.005em;
 }
 
 article blockquote {
@@ -101,8 +119,9 @@ blockquote .zh-han {
 article hr {
   border: 0px;
   height: 1px;
-  background: black;
-  opacity: 0.05;
+  background: #292c2d;
+  /* border-color: #292c2d; */
+  /* opacity: 0.05; */
   margin: 4rem 0px;
 }
 
@@ -119,8 +138,9 @@ article b {
 }
 
 article a {
-  color: #006fd0;
-  text-decoration: none;
+  text-decoration: underline;
+  color: #f3f4f6;
+  text-decoration-color: #5e6365;
 }
 
 article p a:hover,
@@ -153,7 +173,9 @@ article pre {
 }
 
 .post-item {
-  margin-top: 1rem;
+  margin-top: 0rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   margin-bottom: 0;
   clear: both;
 }
@@ -163,7 +185,7 @@ article pre {
   margin-right: 1rem;
   font-size: 1rem;
   font-weight: 500;
-  color: black;
+  color: white;
   letter-spacing: -0.02em;
   text-decoration: none;
 }
@@ -189,12 +211,14 @@ article pre {
 
 header {
   display: flex;
-  margin: 3rem 0px 1rem;
+  margin: 0rem 0px 1rem;
   justify-content: space-between;
 }
 
 header nav {
   display: flex;
+  font-size: 1rem;
+  color: #f3f4f6;
 }
 
 header nav div {
@@ -203,20 +227,33 @@ header nav div {
 
 header nav div a {
   color: inherit;
-  text-decoration: underline;
+
   text-underline-position: auto;
   cursor: pointer;
+  text-decoration: underline;
+  color: #f3f4f6;
+  text-decoration-color: #5e6365;
+  font-weight: 500;
+}
+/* a:link {
+  text-decoration: underline;
+  color: #f3f4f6;
+} */
+a:hover {
+  opacity: 0.7;
 }
 
 header nav div a.active {
   text-decoration: none;
   cursor: default;
 }
-
+.bio-links {
+  font-size: 1rem;
+}
 footer {
   max-width: 42rem;
   padding: 0 1rem;
-  margin: 0 auto 2rem;
+  margin: -2rem 0 2rem;
   font-size: 0.8rem;
   color: #aaa;
   line-height: 1.2em;
