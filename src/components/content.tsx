@@ -147,6 +147,9 @@ export default function Content({ blocks }) {
                 )
               }
               break
+            // case 'callout':
+            //   toRender.push(<NotionRenderer blockMap={blocks} />)
+            //   break
             default:
               if (
                 process.env.NODE_ENV !== 'production' &&

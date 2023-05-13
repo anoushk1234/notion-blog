@@ -7,7 +7,7 @@
 public/atom
 # testing
 /coverage
-
+.yarn
 # next.js
 /.next/
 /out/
